@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonatos - Exercício</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+        let times = [{
+            nome: "Liverpool",
+            vitorias: 23,
+            empates: 7,
+            derrotas:1,
+            golsproprio:70,
+            golscontra: 52
+        }, {
+            nome: "City",
+            vitorias: 24,
+            empates: 2,
+            derrotas: 4,
+            golsproprio: 79,
+            golscontra: 21
+        }, {
+            nome: "Tottenhan",
+            vitorias: 20,
+            empates: 1,
+            derrotas: 9,
+            golsproprio: 57,
+            golscontra: 32
+        }, {
+            nome: "Arsenal",
+            vitorias: 18,
+            empates: 6,
+            derrotas:6,
+            golsproprio: 63,
+            golscontra: 39
+        }, {
+            nome: "Manchester United",
+            vitorias: 17,
+            empates: 7,
+            derrotas: 6,
+            golsproprio: 58,
+            golscontra: 40
+        }, {
+            nome: "Chelsea",
+            vitorias: 17,
+            empates: 6,
+            derrotas: 7,
+            golsproprio: 50,
+            golscontra: 33
+        }];
+
+
+        //Parte 1 do exercício
+        console.log('1. Listar somente os times que possuem vitórias que sejam iguais ou maiores que 20.');
+
+        let timeVitoriasMaiorIgual20 = times.filter(time => {
+            return time.vitorias >= 20;
+        })
+        console.log(timeVitoriasMaiorIgual20);
+
+
+        //Parte 2 do exercício
+        console.log('2. Listar somente os nomes dos times.')
+
+        let nomeTimes = times.map(time => time.nome);
+        console.log(nomeTimes);
+
+
+        //Parte 3 do exercício
+        console.log('3. Adicione um time chamado Wolves, vitórias 12, empates 8, derrotas 10, golsproprio 38, golscontra 36')
+
+        let nomeTime = {
+            nome: "Chelsea",
+            vitorias: 17,
+            empates: 6,
+            derrotas: 7,
+            golsproprio: 50,
+            golscontra: 33
+        }
+
+        times.push(nomeTime);
+        console.log(times);
+
+
+        //Parte 4 do exercício
+        console.log('4. Mostre o nome, a quantidade de jogos (vitorias, derrotas e empates), de vitorias, empates e derrotas de um time')
+
+        let dadosTimes = times.map(time => {
+            return{
+                nome : time.nome,
+                quantidadeJogos : time.vitorias + time.derrotas + time.empates,
+                vitorias : time.vitorias,
+                empates : time.empates,
+                derrotas : time.derrotas,
+                golscontra : time.golscontra,
+                golsproprio : time.golsproprio,
+                saldogols : (time.golsproprio - time.golscontra)
+            }
+        })
+        console.log(dadosTimes);
+
+
+        //Parte 5 do exercício
+        console.log('5. Informe a quantidade de jogos desse campeonato')
+
+        let qtdJogos = dadosTimes.reduce((jogos, time) => {
+            return jogos + time.quantidadeJogos
+        }, 0);
+        console.log(qtdJogos);
+
+    </script>
+    
+</body>
+</html>
