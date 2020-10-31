@@ -29,7 +29,7 @@ const Home = () => {
                     <Row className="text-center">
                         <Col>
                             <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Img variant="top" src="https://www.lg.com.br/blog/wp-content/uploads/2019/11/tecnologia-e-ser-humano.png" />
                                 <Card.Body>
                                     <Card.Title>Tecnologia</Card.Title>
                                     <Card.Text>
@@ -43,7 +43,7 @@ const Home = () => {
 
                         <Col>
                             <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Img variant="top" src="https://www.economiasc.com/wp-content/uploads/2020/04/esta-correta.jpg" />
                                 <Card.Body>
                                     <Card.Title>Inovação</Card.Title>
                                     <Card.Text>
@@ -57,7 +57,7 @@ const Home = () => {
 
                         <Col>
                             <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Img variant="top" src="https://d3q93wnyp4lkf8.cloudfront.net/revista/post_images/19580/2ae2c2aaa3c9b3912769332306c5a292f4817b1a.jpg?1559248176" />
                                 <Card.Body>
                                     <Card.Title>Educação</Card.Title>
                                     <Card.Text>

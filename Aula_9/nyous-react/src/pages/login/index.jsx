@@ -1,16 +1,16 @@
-import Raect from 'react';
 import React, {useState} from 'react';
+import { useHistory } from 'react-router-dom';
 import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
 import {Container, Form, Button} from 'react-bootstrap';
 import logo from '../../assets/img/Logo.svg';
 import './index.css';
 
-import { useHistory } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
-import {url} from '../../utils/constants';
 
 const Login = () => {
+    let history = useHistory();
+
     //A mesma coisa de - string email { get; set; }
     const[email, setEmail] = useState('');
     const[senha, setSenha] = useState('');
@@ -25,7 +25,8 @@ const Login = () => {
             senha : senha
         }
 
-        fetch(url + '/account/login',{
+        //url + '/account/login'
+        fetch('https://localhost:5000/api/account/login', {
             method : 'POST',
             body : JSON.stringify(login),
             headers : {
@@ -53,7 +54,6 @@ const Login = () => {
             } else {
                 history.push('/eventos')
             }
-            
         })
 
         .catch(err => console.error(err))
