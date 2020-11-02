@@ -3,7 +3,7 @@ import Menu from '../../../components/menu';
 import Rodape from '../../../components/rodape';
 import Titulo from '../../../components/titulo';
 import { Container, Table, Button, Form, Card } from 'react-bootstrap';
-import {url} from '../../utils/constants';
+import {url} from '../../../utils/constants';
 
 const CrudCategorias = () => {
     const [id, setId] = useState(0);

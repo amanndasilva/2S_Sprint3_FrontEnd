@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Menu from '../../../components/menu';
 import Rodape from '../../../components/rodape';
 import Titulo from '../../../components/titulo';
-import {url} from '../../utils/constants';
+import {url} from '../../../utils/constants';
 import {Form, Button, Table, Card, Container} from 'react-bootstrap';
 
 const CrudEventos = () => {
