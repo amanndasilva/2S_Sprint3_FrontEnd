@@ -202,21 +202,21 @@ const CrudEventos = () => {
 
                     <tbody>
                     {
-                            eventos.map((item, index) => {
-                                return (
-                                    <tr key={index}>
-                                        <td><img src={item.urlImagem} style={{ width : '120px'}}/></td>
-                                        <td>{item.nome}</td>
-                                        <td><a href={item.link} target="_blank">Ir para o evento</a></td>
-                                        <td>{item.descricao}</td>
-                                        <td>{item.categoria?.nome}</td>
+                        eventos.map((item, index) => {
+                            return (
+                                <tr key={index}>
+                                    <td><img src={item.urlImagem} style={{ width : '120px'}}/></td>
+                                    <td>{item.nome}</td>
+                                    <td><a href={item.link} target="_blank">Ir para o evento</a></td>
+                                    <td>{item.descricao}</td>
+                                    <td>{item.categoria?.nome}</td>
 
-                                        <td>
-                                            <Button variant="warning" value={item.id} onClick={event => editar(event)} >Editar</Button>
-                                            <Button variant="danger" value={item.id} onClick={event => remover(event)} style={{ marginLeft : '40px'}}>Remover</Button>
-                                        </td>
-                                    </tr>
-                                )
+                                    <td>
+                                        <Button variant="warning" value={item.id} onClick={event => editar(event)}>Editar</Button>
+                                        <Button variant="danger" value={item.id} onClick={event => remover(event)} style={{ marginLeft : '40px'}}>Remover</Button>
+                                    </td>
+                                </tr>
+                            )
                             })
                         }
                     </tbody>

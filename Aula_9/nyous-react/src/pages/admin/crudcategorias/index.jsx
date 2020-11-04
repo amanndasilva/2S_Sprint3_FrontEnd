@@ -128,8 +128,8 @@ const CrudCategorias = () => {
 
                             <Form.Group>
                                 <Form.File id="fileCategoria" label="Imagem da categoria" onChange={event => { uploadFile(event)}} />
-                                {/* Se urlImagem diferente de '' mostra a imagem = && */}
-                                {/* Se urlImagem estiver igual '' mostra a imagem = ||  */}
+                                {/* Se a urlImagem for diferente de '' mostra a imagem = && */}
+                                {/* Se a urlImagem estiver igual a '' mostra a imagem = ||  */}
                                 {urlImagem && <img src={urlImagem} style={{ width : '120px'}} />}
                             </Form.Group>
                             <Button type="submit">Salvar</Button>
